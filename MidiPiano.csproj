@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows10.0.26100.0</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<ApplicationIcon>Source/Resources/Icon.ico</ApplicationIcon>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PublishSingleFile>true</PublishSingleFile>
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+	</PropertyGroup>
+	<ItemGroup>
+		<Page Remove="Source\Resources\App.xaml"/>
+		<ApplicationDefinition Include="Source\Resources\App.xaml"/>
+	</ItemGroup>
+</Project>
