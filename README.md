@@ -14,3 +14,12 @@
 * simple bar chart which displays frequencies of each note
 * keyboard which displays current notes being held down
 * statistics panel
+
+## 'where exe'
+
+* refer to releases
+
+## libraries used
+
+* Windows.Devices.Enumeration
+* Windows.Devices.Midi
