@@ -337,6 +337,7 @@ internal class MainWindowViewModel : ViewModelBase
 			Frequencies[index] = 0;
 			Keys[index] = false;
 		}
+		DamperLevel = 0;
 		TotalNotes = 0;
 		MaxFrequency = 0;
 		ModalNotes = [];
