@@ -13,6 +13,7 @@
 * playback midi events through the midi-out device
 * simple bar chart which displays frequencies of each note
 * keyboard which displays current notes being held down
+* meter which displays current pressure on damper/sustain pedal
 * statistics panel
 
 ## 'where exe'
