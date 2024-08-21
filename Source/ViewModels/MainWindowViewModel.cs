@@ -28,6 +28,7 @@ internal class MainWindowViewModel : ViewModelBase
 	private bool recordMode = true;
 	private bool isRunning = false;
 	private bool linearGraph = true;
+	private int damperLevel = 0;
 	private int totalNotes = 0;
 	private int maxFrequency = 0;
 	private int[] modalNotes = [];
@@ -36,21 +37,86 @@ internal class MainWindowViewModel : ViewModelBase
 	private int differentNotes = 0;
 	private int graphHeight = 10;
 
-	public DeviceInformationCollection InputDevices { get => inputDevices; set => SetValue(ref inputDevices, value); }
-	public DeviceInformationCollection OutputDevices { get => outputDevices; set => SetValue(ref outputDevices, value); }
-	public DeviceInformation? InputDevice { get => inputDevice; set => SetValue(ref inputDevice, value); }
-	public DeviceInformation? OutputDevice { get => outputDevice; set => SetValue(ref outputDevice, value); }
-	public TimeSpan CurrentTime { get => currentTime; set => SetValue(ref currentTime, value); }
-	public bool RecordMode { get => recordMode; set => SetValue(ref recordMode, value); }
-	public bool IsRunning { get => isRunning; set => SetValue(ref isRunning, value); }
-	public bool LinearGraph { get => linearGraph; set => SetValue(ref linearGraph, value); }
-	public int TotalNotes { get => totalNotes; set => SetValue(ref totalNotes, value); }
-	public int MaxFrequency { get => maxFrequency; set => SetValue(ref maxFrequency, value); }
-	public int[] ModalNotes { get => modalNotes; set => SetValue(ref modalNotes, value); }
-	public int LowestNote { get => lowestNote; set => SetValue(ref lowestNote, value); }
-	public int HighestNote { get => highestNote; set => SetValue(ref highestNote, value); }
-	public int DifferentNotes { get => differentNotes; set => SetValue(ref differentNotes, value); }
-	public int GraphHeight { get => graphHeight; set => SetValue(ref graphHeight, value); }
+	public DeviceInformationCollection InputDevices
+	{
+		get => inputDevices;
+		set => SetValue(ref inputDevices, value);
+	}
+	public DeviceInformationCollection OutputDevices
+	{
+		get => outputDevices;
+		set => SetValue(ref outputDevices, value);
+	}
+	public DeviceInformation? InputDevice
+	{
+		get => inputDevice;
+		set => SetValue(ref inputDevice, value);
+	}
+	public DeviceInformation? OutputDevice
+	{
+		get => outputDevice;
+		set => SetValue(ref outputDevice, value);
+	}
+	public TimeSpan CurrentTime
+	{
+		get => currentTime;
+		set => SetValue(ref currentTime, value);
+	}
+	public bool RecordMode
+	{
+		get => recordMode;
+		set => SetValue(ref recordMode, value);
+	}
+	public bool IsRunning
+	{
+		get => isRunning;
+		set => SetValue(ref isRunning, value);
+	}
+	public bool LinearGraph
+	{
+		get => linearGraph;
+		set => SetValue(ref linearGraph, value);
+	}
+	public int DamperLevel
+	{
+		get => damperLevel;
+		set => SetValue(ref damperLevel, value);
+	}
+	public int TotalNotes
+	{
+		get => totalNotes;
+		set => SetValue(ref totalNotes, value);
+	}
+	public int MaxFrequency
+	{
+		get => maxFrequency;
+		set => SetValue(ref maxFrequency, value);
+	}
+	public int[] ModalNotes
+	{
+		get => modalNotes;
+		set => SetValue(ref modalNotes, value);
+	}
+	public int LowestNote
+	{
+		get => lowestNote;
+		set => SetValue(ref lowestNote, value);
+	}
+	public int HighestNote
+	{
+		get => highestNote;
+		set => SetValue(ref highestNote, value);
+	}
+	public int DifferentNotes
+	{
+		get => differentNotes;
+		set => SetValue(ref differentNotes, value);
+	}
+	public int GraphHeight
+	{
+		get => graphHeight;
+		set => SetValue(ref graphHeight, value);
+	}
 
 	public ObservableCollection<int> Frequencies { get; } = new(new int[88]);
 	public ObservableCollection<bool> Keys { get; } = new(new bool[88]);
@@ -62,10 +128,10 @@ internal class MainWindowViewModel : ViewModelBase
 
 	public MainWindowViewModel()
 	{
-		RecordSelectedCommand = new((parameter) => ClearRestart(), (parameter) => CanRecordMode());
-		PlaybackSelectedCommand = new((parameter) => ClearRestart(), (parameter) => CanPlaybackMode());
-		RecordPlayCommand = new((parameter) => RecordPlay(), (parameter) => CanRecordPlay());
-		ClearRestartCommand = new((parameter) => ClearRestart(), (parameter) => CanRecordPlay());
+		RecordSelectedCommand = new(ClearRestart, CanRecordMode);
+		PlaybackSelectedCommand = new(ClearRestart, CanPlaybackMode);
+		RecordPlayCommand = new(RecordPlay, CanRecordPlay);
+		ClearRestartCommand = new(ClearRestart, CanRecordPlay);
 		dispatcherTimer.Tick += TimerElapsed;
 		deviceWatcher.Added += DeviceAdded;
 		deviceWatcher.Removed += DeviceRemoved;
@@ -229,7 +295,6 @@ internal class MainWindowViewModel : ViewModelBase
 		switch (message.Type)
 		{
 			case MidiMessageType.NoteOn:
-				Debug.WriteLine(message.ConvertToNoteOn().ConvertToNote());
 				Frequencies[message.ConvertToNoteOn()]++;
 				Keys[message.ConvertToNoteOn()] = true;
 				TotalNotes = Frequencies.Sum();
@@ -243,8 +308,14 @@ internal class MainWindowViewModel : ViewModelBase
 			case MidiMessageType.NoteOff:
 				Keys[message.ConvertToNoteOff()] = false;
 				break;
+			case MidiMessageType.ControlChange:
+				if (((MidiControlChangeMessage)message).Controller is 64)
+				{
+					DamperLevel = ((MidiControlChangeMessage)message).ControlValue;
+				}
+				break;
 		}
-	}
+    }
 	private void StopAllNotes()
 	{
 		try

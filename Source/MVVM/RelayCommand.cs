@@ -2,10 +2,10 @@
 
 namespace MidiPiano.Source.MVVM;
 
-internal class RelayCommand(Action<object> execute, Func<object, bool>? canExecute = null) : ICommand
+internal class RelayCommand(Action execute, Func<bool> canExecute) : ICommand
 {
-	private readonly Action<object> execute = execute;
-	private readonly Func<object, bool>? canExecute = canExecute;
+	private readonly Action execute = execute;
+	private readonly Func<bool> canExecute = canExecute;
 
 	public event EventHandler? CanExecuteChanged
 	{
@@ -13,6 +13,8 @@ internal class RelayCommand(Action<object> execute, Func<object, bool>? canExecu
 		remove => CommandManager.RequerySuggested -= value;
 	}
 
-	public void Execute(object? parameter) => execute(parameter!);
-	public bool CanExecute(object? parameter) => canExecute == null || canExecute(parameter!);
+	public void Execute() => execute.Invoke();
+	public void Execute(object? parameter) => execute.Invoke();
+	public bool CanExecute(object? parameter) => canExecute.Invoke();
+	public bool CanExecute() => canExecute.Invoke();
 }

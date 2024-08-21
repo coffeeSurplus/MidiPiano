@@ -6,12 +6,16 @@
 		<viewModel:MainWindowViewModel/>
 	</Window.DataContext>
 	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="25"/>
+			<ColumnDefinition Width="1*"/>
+		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="50"/>
 			<RowDefinition Height="1*"/>
 			<RowDefinition Height="75"/>
 		</Grid.RowDefinitions>
-		<Grid Grid.Row="0">
+		<Grid Grid.Column="1" Grid.Row="0">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="300"/>
 				<ColumnDefinition Width="1*"/>
@@ -63,13 +67,13 @@
 				<RadioButton Content="aligned" IsChecked="{Binding Path=LinearGraph, Converter={StaticResource ResourceKey=GeneralBoolToBoolInverted}}"/>
 			</UniformGrid>
 		</Grid>
-		<Border Grid.Row="1" Style="{StaticResource ResourceKey=DataBorder}">
+		<Border Grid.Column="1" Grid.Row="1" Style="{StaticResource ResourceKey=DataBorder}">
 			<Grid>
 				<Viewbox Visibility="{Binding Path=LinearGraph, Converter={StaticResource ResourceKey=GeneralBoolToVisbility}}">
 					<ItemsControl Height="{Binding Path=GraphHeight}" ItemsSource="{Binding Path=Frequencies}"/>
 				</Viewbox>
 				<Viewbox Visibility="{Binding Path=LinearGraph, Converter={StaticResource ResourceKey=GeneralBoolToVisbilityInverted}}">
-					<Grid Width="5200" Height="{Binding Path=GraphHeight}">
+					<Grid Style="{StaticResource ResourceKey=DataGrid}" Height="{Binding Path=GraphHeight}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -381,7 +385,7 @@
 				</StackPanel>
 			</Grid>
 		</Border>
-		<Border Grid.Row="2" Style="{StaticResource ResourceKey=DataBorder}">
+		<Border Grid.Column="1" Grid.Row="2" Style="{StaticResource ResourceKey=DataBorder}">
 			<Grid>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="1*"/>
@@ -694,6 +698,13 @@
 				<TextBlock Grid.Column="176" Grid.ColumnSpan="4" Grid.Row="1" Text="C7"/>
 				<TextBlock Grid.Column="204" Grid.ColumnSpan="4" Grid.Row="1" Text="C8"/>
 			</Grid>
+		</Border>
+		<Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Style="{StaticResource ResourceKey=DataBorder}">
+			<Viewbox>
+				<Grid Style="{StaticResource ResourceKey=PedalGrid}">
+					<Rectangle Style="{StaticResource ResourceKey=Pedal}" Height="{Binding Path=DamperLevel}"/>
+				</Grid>
+			</Viewbox>
 		</Border>
 	</Grid>
 </Window>
