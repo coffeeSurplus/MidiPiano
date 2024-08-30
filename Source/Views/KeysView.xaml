@@ -1,0 +1,320 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:viewModel="clr-namespace:MidiPiano.Source.ViewModels">
+	<DataTemplate DataType="{x:Type viewModel:MainWindowViewModel}" x:Key="KeysView">
+		<Border Style="{StaticResource ResourceKey=DataPanel}">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="1*"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="2*"/>
+					<RowDefinition Height="1*"/>
+				</Grid.RowDefinitions>
+				<Rectangle Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[0], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[2], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="8" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[3], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="12" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[5], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="16" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[7], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="20" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[8], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="24" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[10], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="28" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[12], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="32" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[14], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="36" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[15], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="40" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[17], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="44" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[19], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="48" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[20], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="52" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[22], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="56" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[24], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="60" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[26], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="64" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[27], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="68" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[29], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="72" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[31], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="76" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[32], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="80" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[34], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="84" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[36], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="88" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[38], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="92" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[39], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="96" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[41], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="100" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[43], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="104" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[44], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="108" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[46], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="112" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[48], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="116" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[50], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="120" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[51], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="124" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[53], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="128" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[55], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="132" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[56], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="136" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[58], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="140" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[60], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="144" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[62], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="148" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[63], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="152" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[65], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="156" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[67], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="160" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[68], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="164" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[70], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="168" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[72], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="172" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[74], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="176" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[75], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="180" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[77], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="184" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[79], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="188" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[80], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="192" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[82], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="196" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[84], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="200" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[86], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="204" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[87], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+				<Rectangle Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[1], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="11" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[4], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="15" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[6], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="23" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[9], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="27" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[11], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="31" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[13], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="39" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[16], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="43" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[18], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="51" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[21], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="55" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[23], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="59" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[25], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="67" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[28], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="71" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[30], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="79" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[33], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="83" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[35], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="87" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[37], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="95" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[40], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="99" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[42], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="107" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[45], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="111" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[47], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="115" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[49], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="123" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[52], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="127" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[54], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="135" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[57], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="139" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[59], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="143" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[61], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="151" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[64], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="155" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[66], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="163" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[69], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="167" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[71], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="171" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[73], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="179" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[76], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="183" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[78], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="191" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[81], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="195" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[83], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<Rectangle Grid.Column="199" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[85], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+				<TextBlock Grid.Column="8" Grid.ColumnSpan="4" Grid.Row="1" Text="C1"/>
+				<TextBlock Grid.Column="36" Grid.ColumnSpan="4" Grid.Row="1" Text="C2"/>
+				<TextBlock Grid.Column="64" Grid.ColumnSpan="4" Grid.Row="1" Text="C3"/>
+				<TextBlock Grid.Column="92" Grid.ColumnSpan="4" Grid.Row="1" Text="C4"/>
+				<TextBlock Grid.Column="120" Grid.ColumnSpan="4" Grid.Row="1" Text="C5"/>
+				<TextBlock Grid.Column="148" Grid.ColumnSpan="4" Grid.Row="1" Text="C6"/>
+				<TextBlock Grid.Column="176" Grid.ColumnSpan="4" Grid.Row="1" Text="C7"/>
+				<TextBlock Grid.Column="204" Grid.ColumnSpan="4" Grid.Row="1" Text="C8"/>
+			</Grid>
+		</Border>
+	</DataTemplate>	
+</ResourceDictionary>

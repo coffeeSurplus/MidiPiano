@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:viewModel="clr-namespace:MidiPiano.Source.ViewModels">
+	<DataTemplate DataType="{x:Type viewModel:MainWindowViewModel}" x:Key="StatisticsView">
+		<StackPanel Style="{StaticResource ResourceKey=StatisticsPanel}">
+			<TextBlock Style="{StaticResource ResourceKey=StatisticsText}" Text="{Binding Path=CurrentTime, Converter={StaticResource ResourceKey=StatisticsTimer}}"/>
+			<TextBlock Style="{StaticResource ResourceKey=StatisticsText}" Text="{Binding Path=TotalNotes, Converter={StaticResource ResourceKey=StatisticsTotal}}"/>
+			<TextBlock Style="{StaticResource ResourceKey=StatisticsText}" Text="{Binding Path=MaxFrequency, Converter={StaticResource ResourceKey=StatisticsMax}}"/>
+			<TextBlock Style="{StaticResource ResourceKey=StatisticsText}" Text="{Binding Path=ModalNotes, Converter={StaticResource ResourceKey=StatisticsMode}}"/>
+			<TextBlock Style="{StaticResource ResourceKey=StatisticsText}" Text="{Binding Path=LowestNote, Converter={StaticResource ResourceKey=StatisticsLowest}}"/>
+			<TextBlock Style="{StaticResource ResourceKey=StatisticsText}" Text="{Binding Path=HighestNote, Converter={StaticResource ResourceKey=StatisticsHighest}}"/>
+			<TextBlock Style="{StaticResource ResourceKey=StatisticsText}" Text="{Binding Path=DifferentNotes, Converter={StaticResource ResourceKey=StatisticsDifferent}}"/>
+		</StackPanel>
+	</DataTemplate>	
+</ResourceDictionary>

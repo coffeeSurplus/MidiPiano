@@ -1,0 +1,21 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 StartupUri="/MidiPiano;component/Source/Views/MainWindowView.xaml">
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Converters.xaml"/>
+				<ResourceDictionary Source="Defaults.xaml"/>
+				<ResourceDictionary Source="Buttons.xaml"/>
+				<ResourceDictionary Source="Fonts.xaml"/>
+				<ResourceDictionary Source="Panels.xaml"/>
+				<ResourceDictionary Source="/MidiPiano;component/Source/Views/DamperPedalView.xaml"/>
+				<ResourceDictionary Source="/MidiPiano;component/Source/Views/FrequenciesView.xaml"/>
+				<ResourceDictionary Source="/MidiPiano;component/Source/Views/KeysView.xaml"/>
+				<ResourceDictionary Source="/MidiPiano;component/Source/Views/NotesView.xaml"/>
+				<ResourceDictionary Source="/MidiPiano;component/Source/Views/SettingsView.xaml"/>
+				<ResourceDictionary Source="/MidiPiano;component/Source/Views/StatisticsView.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

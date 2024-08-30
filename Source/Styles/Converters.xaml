@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:converter="clr-namespace:MidiPiano.Source.Converters">
+	<converter:GeneralBoolToBoolInvertedConverter x:Key="GeneralBoolToBoolInverted"/>
+	<converter:GeneralBoolToVisibilityConverter x:Key="GeneralBoolToVisbility"/>
+	<converter:GeneralBoolToVisibilityInvertedConverter x:Key="GeneralBoolToVisbilityInverted"/>
+	<converter:KeysBlackConverter x:Key="KeysBlack"/>
+	<converter:KeysWhiteConverter x:Key="KeysWhite"/>
+	<converter:NotesCanvasDirectionConverter x:Key="NotesCanvasDirection"/>
+	<converter:NotesCanvasPositionConverter x:Key="NotesCanvasPosition"/>
+	<converter:NotesXPositionConverter x:Key="NotesXPosition"/>
+	<converter:NotesYPositionConverter x:Key="NotesYPosition"/>
+	<converter:SettingsButtonClearRestartConverter x:Key="SettingsButtonClearRestart"/>
+	<converter:SettingsButtonRecordPlayConverter x:Key="SettingsButtonRecordPlay"/>
+	<converter:SettingsDeviceInputNameConverter x:Key="SettingsDeviceInputName"/>
+	<converter:SettingsDeviceNamesConverter x:Key="SettingsDeviceNames"/>
+	<converter:SettingsDeviceOutputNameConverter x:Key="SettingsDeviceOutputName"/>
+	<converter:StatisticsDifferentConverter x:Key="StatisticsDifferent"/>
+	<converter:StatisticsHighestConverter x:Key="StatisticsHighest"/>
+	<converter:StatisticsLowestConverter x:Key="StatisticsLowest"/>
+	<converter:StatisticsMaxConverter x:Key="StatisticsMax"/>
+	<converter:StatisticsModeConverter x:Key="StatisticsMode"/>
+	<converter:StatisticsTimerConverter x:Key="StatisticsTimer"/>
+	<converter:StatisticsTotalConverter x:Key="StatisticsTotal"/>
+</ResourceDictionary>

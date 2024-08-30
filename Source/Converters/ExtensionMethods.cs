@@ -1,6 +1,6 @@
 ﻿using Windows.Devices.Midi;
 
-namespace MidiPiano.Source.MVVM;
+namespace MidiPiano.Source.Converters;
 
 internal static class ExtensionMethods
 {

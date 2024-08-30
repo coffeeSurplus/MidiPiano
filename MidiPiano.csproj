@@ -10,8 +10,7 @@
 		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
 	</PropertyGroup>
 	<ItemGroup>
-		<Page Remove="Source\Resources\App.xaml" />
-		<ApplicationDefinition Include="Source\Resources\App.xaml" />
-		<Folder Include="Gallery\"/>
+		<Page Remove="Source\Styles\App.xaml" />
+		<ApplicationDefinition Include="Source\Styles\App.xaml" />
 	</ItemGroup>
 </Project>

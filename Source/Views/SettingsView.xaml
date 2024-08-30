@@ -1,0 +1,58 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:viewModel="clr-namespace:MidiPiano.Source.ViewModels">
+	<DataTemplate DataType="{x:Type viewModel:MainWindowViewModel}" x:Key="SettingsView">
+		<Grid Style="{StaticResource ResourceKey=SettingsPanel}">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="300"/>
+				<ColumnDefinition Width="1*"/>
+				<ColumnDefinition Width="75"/>
+				<ColumnDefinition Width="75"/>
+				<ColumnDefinition Width="75"/>
+				<ColumnDefinition Width="75"/>
+				<ColumnDefinition Width="75"/>
+				<ColumnDefinition Width="100"/>
+			</Grid.ColumnDefinitions>
+			<Grid Grid.Column="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="100"/>
+					<ColumnDefinition Width="200"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="1*"/>
+					<RowDefinition Height="1*"/>
+				</Grid.RowDefinitions>
+				<TextBlock Grid.Column="0" Grid.Row="0" Text="input device:"/>
+				<TextBlock Grid.Column="0" Grid.Row="1" Text="output device:"/>
+				<ComboBox Grid.Column="1" Grid.Row="0" ItemsSource="{Binding Path=InputDevices, Converter={StaticResource ResourceKey=SettingsDeviceNames}}" SelectedItem="{Binding Path=InputDevice, Converter={StaticResource ResourceKey=SettingsDeviceInputName}}" IsEnabled="{Binding Path=IsRunning, Converter={StaticResource ResourceKey=GeneralBoolToBoolInverted}}"/>
+				<ComboBox Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Path=OutputDevices, Converter={StaticResource ResourceKey=SettingsDeviceNames}}" SelectedItem="{Binding Path=OutputDevice, Converter={StaticResource ResourceKey=SettingsDeviceOutputName}}" IsEnabled="{Binding Path=IsRunning, Converter={StaticResource ResourceKey=GeneralBoolToBoolInverted}}"/>
+			</Grid>
+			<TextBlock Grid.Column="2" Text="mode:"/>
+			<UniformGrid Grid.Column="3" Rows="2">
+				<RadioButton Content="record" IsChecked="{Binding Path=RecordMode}" Command="{Binding Path=RecordSelectedCommand}"/>
+				<RadioButton Content="playback" IsChecked="{Binding Path=RecordMode, Converter={StaticResource ResourceKey=GeneralBoolToBoolInverted}}" Command="{Binding Path=PlaybackSelectedCommand}"/>
+			</UniformGrid>
+			<ToggleButton Grid.Column="4" IsChecked="{Binding Path=IsRunning}" Command="{Binding Path=RecordPlayCommand}">
+				<ToggleButton.Content>
+					<MultiBinding Converter="{StaticResource ResourceKey=SettingsButtonRecordPlay}">
+						<Binding Path="RecordMode"/>
+						<Binding Path="IsRunning"/>
+					</MultiBinding>
+				</ToggleButton.Content>
+			</ToggleButton>
+			<Button Grid.Column="5" Command="{Binding Path=ClearRestartCommand}">
+				<Button.Content>
+					<MultiBinding Converter="{StaticResource ResourceKey=SettingsButtonClearRestart}">
+						<Binding Path="RecordMode"/>
+						<Binding Path="IsRunning"/>
+					</MultiBinding>
+				</Button.Content>
+			</Button>
+			<TextBlock Grid.Column="6" Text="graph:"/>
+			<UniformGrid Grid.Column="7" Rows="2">
+				<RadioButton Content="notes" IsChecked="{Binding Path=NotesGraph}"/>
+				<RadioButton Content="frequencies" IsChecked="{Binding Path=NotesGraph, Converter={StaticResource ResourceKey=GeneralBoolToBoolInverted}}"/>
+			</UniformGrid>
+		</Grid>
+	</DataTemplate>
+</ResourceDictionary>

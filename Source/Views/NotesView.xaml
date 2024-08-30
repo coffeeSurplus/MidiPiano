@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:model="clr-namespace:MidiPiano.Source.Models"
+					xmlns:view="clr-namespace:MidiPiano.Source.Views"
+					xmlns:viewModel="clr-namespace:MidiPiano.Source.ViewModels">
+	<DataTemplate DataType="{x:Type viewModel:MainWindowViewModel}" x:Key="NotesView">
+		<Border Style="{StaticResource ResourceKey=DataPanel}" Visibility="{Binding Path=NotesGraph, Converter={StaticResource ResourceKey=GeneralBoolToVisbility}}">
+			<Viewbox>
+				<Grid Style="{StaticResource ResourceKey=NotesPanel}">
+					<ItemsControl ItemsSource="{Binding Path=Notes}">
+						<ItemsControl.Margin>
+							<MultiBinding Converter="{StaticResource ResourceKey=NotesCanvasPosition}">
+								<Binding Path="CurrentTime"/>
+								<Binding Path="RecordMode"/>
+							</MultiBinding>
+						</ItemsControl.Margin>
+						<ItemsControl.RenderTransform>
+							<ScaleTransform ScaleY="{Binding Path=RecordMode, Converter={StaticResource	ResourceKey=NotesCanvasDirection}}"/>
+						</ItemsControl.RenderTransform>
+						<ItemsControl.ItemsPanel>
+							<ItemsPanelTemplate>
+								<Canvas/>
+							</ItemsPanelTemplate>
+						</ItemsControl.ItemsPanel>
+						<ItemsControl.ItemContainerStyle>
+							<Style>
+								<Setter Property="Canvas.Left" Value="{Binding Path=Note, Converter={StaticResource ResourceKey=NotesXPosition}}"/>
+								<Setter Property="Canvas.Bottom" Value="{Binding Path=StartTime, Converter={StaticResource ResourceKey=NotesYPosition}}"/>
+							</Style>
+						</ItemsControl.ItemContainerStyle>
+						<ItemsControl.ItemTemplate>
+							<DataTemplate DataType="{x:Type model:NoteModel}">
+								<Rectangle Style="{StaticResource ResourceKey=NoteItem}" Height="{Binding Path=Duration, Converter={StaticResource ResourceKey=NotesYPosition}}"/>
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+					</ItemsControl>
+				</Grid>
+			</Viewbox>
+		</Border>
+	</DataTemplate>
+</ResourceDictionary>

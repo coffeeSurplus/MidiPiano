@@ -1,4 +1,6 @@
-﻿using MidiPiano.Source.MVVM;
+﻿using MidiPiano.Source.Converters;
+using MidiPiano.Source.Models;
+using MidiPiano.Source.MVVM;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows;
@@ -13,7 +15,6 @@ internal class MainWindowViewModel : ViewModelBase
 	private readonly DeviceWatcher deviceWatcher = DeviceInformation.CreateWatcher($"{MidiInPort.GetDeviceSelector()} OR {MidiOutPort.GetDeviceSelector()}");
 	private readonly DispatcherTimer dispatcherTimer = new() { Interval = new(0, 0, 0, 0, 1) };
 	private readonly Stopwatch stopwatch = new();
-	private readonly List<IMidiMessage> recording = [];
 
 	private MidiInPort? midiInPort = null;
 	private MidiOutPort? midiOutPort = null;
@@ -27,13 +28,13 @@ internal class MainWindowViewModel : ViewModelBase
 	private TimeSpan currentTime = TimeSpan.Zero;
 	private bool recordMode = true;
 	private bool isRunning = false;
-	private bool linearGraph = true;
+	private bool notesGraph = true;
 	private int damperLevel = 0;
 	private int totalNotes = 0;
 	private int maxFrequency = 0;
 	private int[] modalNotes = [];
-	private int lowestNote = -1;
-	private int highestNote = -1;
+	private int? lowestNote = null;
+	private int? highestNote = null;
 	private int differentNotes = 0;
 	private int graphHeight = 10;
 
@@ -72,10 +73,10 @@ internal class MainWindowViewModel : ViewModelBase
 		get => isRunning;
 		set => SetValue(ref isRunning, value);
 	}
-	public bool LinearGraph
+	public bool NotesGraph
 	{
-		get => linearGraph;
-		set => SetValue(ref linearGraph, value);
+		get => notesGraph;
+		set => SetValue(ref notesGraph, value);
 	}
 	public int DamperLevel
 	{
@@ -97,12 +98,12 @@ internal class MainWindowViewModel : ViewModelBase
 		get => modalNotes;
 		set => SetValue(ref modalNotes, value);
 	}
-	public int LowestNote
+	public int? LowestNote
 	{
 		get => lowestNote;
 		set => SetValue(ref lowestNote, value);
 	}
-	public int HighestNote
+	public int? HighestNote
 	{
 		get => highestNote;
 		set => SetValue(ref highestNote, value);
@@ -118,8 +119,11 @@ internal class MainWindowViewModel : ViewModelBase
 		set => SetValue(ref graphHeight, value);
 	}
 
-	public ObservableCollection<int> Frequencies { get; } = new(new int[88]);
+	public ObservableCollection<IMidiMessage> MidiMessages { get; } = [];
+	public ObservableCollection<NoteModel> Notes { get; } = [];
+	public ObservableCollection<TimeSpan> LastPlayed { get; } = new(new TimeSpan[88]);
 	public ObservableCollection<bool> Keys { get; } = new(new bool[88]);
+	public ObservableCollection<int> Frequencies { get; } = new(new int[88]);
 
 	public RelayCommand RecordSelectedCommand { get; }
 	public RelayCommand PlaybackSelectedCommand { get; }
@@ -132,10 +136,73 @@ internal class MainWindowViewModel : ViewModelBase
 		PlaybackSelectedCommand = new(ClearRestart, CanPlaybackMode);
 		RecordPlayCommand = new(RecordPlay, CanRecordPlay);
 		ClearRestartCommand = new(ClearRestart, CanRecordPlay);
-		dispatcherTimer.Tick += TimerElapsed;
 		deviceWatcher.Added += DeviceAdded;
 		deviceWatcher.Removed += DeviceRemoved;
+		dispatcherTimer.Tick += TimerElapsed;
 		deviceWatcher.Start();
+	}
+
+	private void DeviceAdded(DeviceWatcher sender, DeviceInformation args) => (InputDevices, OutputDevices) = (Task.Run(GetInputDevices).Result, Task.Run(GetOutputDevices).Result);
+	private void DeviceRemoved(DeviceWatcher sender, DeviceInformationUpdate args)
+	{
+		(InputDevices, OutputDevices) = (Task.Run(GetInputDevices).Result, Task.Run(GetOutputDevices).Result);
+		if (InputDevice != null && !InputDevices.Contains(InputDevice))
+		{
+			InputDevice = null;
+			Application.Current.Dispatcher.Invoke(CurrentDeviceLost);
+		}
+		if (OutputDevice != null && !OutputDevices.Contains(OutputDevice))
+		{
+			OutputDevice = null;
+			Application.Current.Dispatcher.Invoke(CurrentDeviceLost);
+		}
+	}
+	private void TimerElapsed(object? sender, EventArgs e)
+	{
+		CurrentTime = stopwatch.Elapsed;
+		switch (recordMode)
+		{
+			case true:
+				for (int index = 0; index < 88; index++)
+				{
+					if (Keys[index])
+					{
+						Notes.Last(x => x.Note == index).Duration = CurrentTime - LastPlayed[index];
+					}
+				}
+				break;
+			case false:
+				switch (index < MidiMessages.Count)
+				{
+					case true:
+						while (index < MidiMessages.Count && MidiMessages[index].Timestamp <= stopwatch.Elapsed)
+						{
+							try
+							{
+								midiOutPort?.SendMessage(MidiMessages[index]);
+							}
+							catch
+							{
+								return;
+							}
+							DistributeMessage(MidiMessages[index]);
+							index++;
+						}
+						break;
+					case false:
+						IsRunning = false;
+						isEnded = true;
+						PlayEnd();
+						break;
+				}
+				break;
+		}
+	}
+	private void MidiMessageRecieved(MidiInPort sender, MidiMessageReceivedEventArgs args)
+	{
+		MidiMessages.Add(args.Message);
+		Application.Current.Dispatcher.Invoke(AddNote, args.Message);
+		Application.Current.Dispatcher.Invoke(DistributeMessage, args.Message);
 	}
 
 	private void RecordPlay()
@@ -168,27 +235,27 @@ internal class MainWindowViewModel : ViewModelBase
 				break;
 		}
 	}
-	private bool CanRecordPlay() => RecordMode ? InputDevice != null : OutputDevice != null;
-	private bool CanRecordMode() => !IsRunning && InputDevice != null;
-	private bool CanPlaybackMode() => !IsRunning && OutputDevice != null;
+	private bool CanRecordPlay() => RecordMode ? InputDevice is not null : OutputDevice is not null;
+	private bool CanRecordMode() => !IsRunning && InputDevice is not null;
+	private bool CanPlaybackMode() => !IsRunning && OutputDevice is not null;
 
 	private void RecordStart()
 	{
 		midiInPort = Task.Run(GetMidiInPort).Result;
-		if (midiInPort != null)
+		if (midiInPort is not null)
 		{
-			midiInPort.MessageReceived += MessageReceived;
+			midiInPort.MessageReceived += MidiMessageRecieved;
+			dispatcherTimer.Start();
+			stopwatch.Start();
 		}
-		dispatcherTimer.Start();
-		stopwatch.Start();
 	}
 	private void RecordEnd()
 	{
 		dispatcherTimer.Stop();
 		stopwatch.Stop();
-		if (midiInPort != null)
+		if (midiInPort is not null)
 		{
-			midiInPort.MessageReceived -= MessageReceived;
+			midiInPort.MessageReceived -= MidiMessageRecieved;
 			midiInPort.Dispose();
 			midiInPort = null;
 		}
@@ -215,7 +282,8 @@ internal class MainWindowViewModel : ViewModelBase
 	private void Clear()
 	{
 		RecordEnd();
-		recording.Clear();
+		MidiMessages.Clear();
+		Notes.Clear();
 		Reset();
 	}
 	private void Restart()
@@ -226,68 +294,12 @@ internal class MainWindowViewModel : ViewModelBase
 		Reset();
 	}
 
-	private void DeviceAdded(DeviceWatcher sender, DeviceInformation args) => (InputDevices, OutputDevices) = (Task.Run(GetInputDevices).Result, Task.Run(GetOutputDevices).Result);
-	private void DeviceRemoved(DeviceWatcher sender, DeviceInformationUpdate args)
+	private void AddNote(IMidiMessage message)
 	{
-		(InputDevices, OutputDevices) = (Task.Run(GetInputDevices).Result, Task.Run(GetOutputDevices).Result);
-		if (InputDevice != null && !InputDevices.Contains(InputDevice))
+		if (message.Type is MidiMessageType.NoteOn)
 		{
-			InputDevice = null;
-			Application.Current.Dispatcher.Invoke(() =>
-			{
-				if (IsRunning)
-				{
-					IsRunning = false;
-					ClearRestart();
-				}
-			});
-		}
-		if (OutputDevice != null && !OutputDevices.Contains(OutputDevice))
-		{
-			OutputDevice = null;
-			Application.Current.Dispatcher.Invoke(() =>
-			{
-				if (IsRunning)
-				{
-					IsRunning = false;
-					ClearRestart();
-				}
-			});
-		}
-	}
-	private void MessageReceived(MidiInPort sender, MidiMessageReceivedEventArgs args)
-	{
-		recording.Add(args.Message);
-		Application.Current.Dispatcher.Invoke(() => DistributeMessage(args.Message));
-	}
-	private void TimerElapsed(object? sender, EventArgs e)
-	{
-		CurrentTime = stopwatch.Elapsed;
-		if (!RecordMode)
-		{
-			switch (index < recording.Count)
-			{
-				case true:
-					while (index < recording.Count && recording[index].Timestamp <= stopwatch.Elapsed)
-					{
-						try
-						{
-							midiOutPort?.SendMessage(recording[index]);
-						}
-						catch
-						{
-							return;
-						}
-						DistributeMessage(recording[index]);
-						index++;
-					}
-					break;
-				case false:
-					IsRunning = false;
-					isEnded = true;
-					PlayEnd();
-					break;
-			}
+			Notes.Add(new(message.ConvertToNoteOn(), message.Timestamp));
+			LastPlayed[message.ConvertToNoteOn()] = message.Timestamp;
 		}
 	}
 	private void DistributeMessage(IMidiMessage message)
@@ -315,7 +327,15 @@ internal class MainWindowViewModel : ViewModelBase
 				}
 				break;
 		}
-    }
+	}
+	private void CurrentDeviceLost()
+	{
+		if (IsRunning)
+		{
+			IsRunning = false;
+			ClearRestart();
+		}
+	}
 	private void StopAllNotes()
 	{
 		try
@@ -334,15 +354,16 @@ internal class MainWindowViewModel : ViewModelBase
 	{
 		for (int index = 0; index < 88; index++)
 		{
-			Frequencies[index] = 0;
+			LastPlayed[index] = TimeSpan.Zero;
 			Keys[index] = false;
+			Frequencies[index] = 0;
 		}
 		DamperLevel = 0;
 		TotalNotes = 0;
 		MaxFrequency = 0;
 		ModalNotes = [];
-		LowestNote = -1;
-		HighestNote = -1;
+		LowestNote = null;
+		HighestNote = null;
 		DifferentNotes = 0;
 		GraphHeight = 10;
 		CurrentTime = TimeSpan.Zero;
@@ -353,8 +374,8 @@ internal class MainWindowViewModel : ViewModelBase
 		}
 	}
 
-	private async Task<MidiInPort?> GetMidiInPort() => InputDevice != null ? await MidiInPort.FromIdAsync(InputDevice.Id) : null;
-	private async Task<MidiOutPort?> GetMidiOutPort() => OutputDevice != null ? (MidiOutPort)await MidiOutPort.FromIdAsync(OutputDevice.Id) : null;
+	private async Task<MidiInPort?> GetMidiInPort() => InputDevice is not null ? await MidiInPort.FromIdAsync(InputDevice.Id) : null;
+	private async Task<MidiOutPort?> GetMidiOutPort() => OutputDevice is not null ? (MidiOutPort)await MidiOutPort.FromIdAsync(OutputDevice.Id) : null;
 	private static async Task<DeviceInformationCollection> GetInputDevices() => await DeviceInformation.FindAllAsync(MidiInPort.GetDeviceSelector());
 	private static async Task<DeviceInformationCollection> GetOutputDevices() => await DeviceInformation.FindAllAsync(MidiOutPort.GetDeviceSelector());
 }

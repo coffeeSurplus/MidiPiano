@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:viewModel="clr-namespace:MidiPiano.Source.ViewModels">
+	<DataTemplate DataType="{x:Type viewModel:MainWindowViewModel}" x:Key="FrequenciesView">
+		<Border Style="{StaticResource ResourceKey=DataPanel}" Visibility="{Binding Path=NotesGraph, Converter={StaticResource ResourceKey=GeneralBoolToVisbilityInverted}}">
+			<Viewbox>
+				<ItemsControl Height="{Binding Path=GraphHeight}" ItemsSource="{Binding Path=Frequencies}">
+					<ItemsControl.ItemsPanel>
+						<ItemsPanelTemplate>
+							<StackPanel Style="{StaticResource ResourceKey=FrequenciesPanel}"/>
+						</ItemsPanelTemplate>
+					</ItemsControl.ItemsPanel>
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<Rectangle Style="{StaticResource ResourceKey=FrequencyItem}" Height="{Binding}"/>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+			</Viewbox>
+		</Border>
+	</DataTemplate>
+</ResourceDictionary>

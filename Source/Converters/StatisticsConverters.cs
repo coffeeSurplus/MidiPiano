@@ -1,5 +1,4 @@
-﻿using MidiPiano.Source.MVVM;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Windows.Data;
 
 namespace MidiPiano.Source.Converters;
@@ -12,13 +11,13 @@ internal class StatisticsDifferentConverter : IValueConverter
 
 internal class StatisticsHighestConverter : IValueConverter
 {
-	public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => $"highest note: {(((int)value) != -1 ? ((int)value).ConvertToNote() : "n/a")}";
+	public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => $"highest note: {(value is not null ? ((int)value).ConvertToNote() : "n/a")}";
 	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) => Binding.DoNothing;
 }
 
 internal class StatisticsLowestConverter : IValueConverter
 {
-	public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => $"lowest note: {(((int)value) != -1 ? ((int)value).ConvertToNote() : "n/a")}";
+	public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => $"lowest note: {(value is not null ? ((int)value).ConvertToNote() : "n/a")}";
 	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) => Binding.DoNothing;
 }
 
@@ -30,7 +29,13 @@ internal class StatisticsMaxConverter : IValueConverter
 
 internal class StatisticsModeConverter : IValueConverter
 {
-	public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => $"modal {(((int[])value).Length != 1 ? "notes" : "note")}: {(((int[])value).Length != 0 ? string.Join(", ", ((int[])value).Select(x => x.ConvertToNote())) : "n/a")}";
+	public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => $"modal {(((int[])value).Length is not 1 ? "notes" : "note")}: {(((int[])value) is not [] ? string.Join(", ", ((int[])value).Select(x => x.ConvertToNote())) : "n/a")}";
+	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) => Binding.DoNothing;
+}
+
+internal class StatisticsTimerConverter : IValueConverter
+{
+	public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => $"elapsed: {(((TimeSpan)value).Hours is not 0 ? $"{value:hh':'mm':'ss':'ff}" : $"{value:mm':'ss':'ff}")}";
 	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) => Binding.DoNothing;
 }
 

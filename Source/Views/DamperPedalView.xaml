@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:viewModel="clr-namespace:MidiPiano.Source.ViewModels">
+	<DataTemplate DataType="{x:Type viewModel:MainWindowViewModel}" x:Key="DamperPedalView">
+		<Border Style="{StaticResource ResourceKey=DataPanel}">
+			<Viewbox>
+				<Grid Style="{StaticResource ResourceKey=DamperPedalPanel}">
+					<Rectangle Style="{StaticResource ResourceKey=DamperPedalItem}" Height="{Binding Path=DamperLevel}"/>
+				</Grid>
+			</Viewbox>
+		</Border>
+	</DataTemplate>	
+</ResourceDictionary>
