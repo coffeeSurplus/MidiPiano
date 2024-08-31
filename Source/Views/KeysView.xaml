@@ -5,58 +5,58 @@
 		<Border Style="{StaticResource ResourceKey=DataPanel}">
 			<Grid>
 				<UniformGrid Grid.Row="0" Grid.RowSpan="2" Columns="52">
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[0], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[2], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[3], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[5], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[7], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[8], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[10], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[12], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[14], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[15], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[17], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[19], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[20], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[22], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[24], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[26], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[27], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[29], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[31], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[32], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[34], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[36], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[38], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[39], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[41], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[43], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[44], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[46], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[48], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[50], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[51], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[53], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[55], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[56], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[58], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[60], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[62], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[63], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[65], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[67], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[68], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[70], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[72], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[74], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[75], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[77], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[79], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[80], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[82], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[84], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[86], Converter={StaticResource ResourceKey=KeysWhite}}"/>
-					<Rectangle Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[87], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[0], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[2], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[3], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[5], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[7], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[8], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[10], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[12], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[14], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[15], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[17], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[19], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[20], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[22], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[24], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[26], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[27], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[29], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[31], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[32], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[34], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[36], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[38], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[39], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[41], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[43], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[44], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[46], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[48], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[50], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[51], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[53], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[55], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[56], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[58], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[60], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[62], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[63], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[65], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[67], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[68], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[70], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[72], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[74], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[75], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[77], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[79], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[80], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[82], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[84], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[86], Converter={StaticResource ResourceKey=KeysWhite}}"/>
+					<Rectangle Style="{StaticResource ResourceKey=KeyItemWhite}" Fill="{Binding Path=Keys[87], Converter={StaticResource ResourceKey=KeysWhite}}"/>
 				</UniformGrid>
 				<Grid Grid.Row="0">
 					<Grid.ColumnDefinitions>
@@ -117,15 +117,15 @@
 						<RowDefinition Height="2*"/>
 						<RowDefinition Height="1*"/>
 					</Grid.RowDefinitions>
-					<Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
+					<Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[1], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[1], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="0">
+					<Grid Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -133,10 +133,10 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[4], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[6], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[4], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[6], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="5" Grid.ColumnSpan="4" Grid.Row="0">
+					<Grid Grid.Column="5" Grid.ColumnSpan="4" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -146,11 +146,11 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[9], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[11], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[13], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[9], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[11], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[13], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="9" Grid.ColumnSpan="3" Grid.Row="0">
+					<Grid Grid.Column="9" Grid.ColumnSpan="3" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -158,10 +158,10 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[16], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[18], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[16], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[18], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="12" Grid.ColumnSpan="4" Grid.Row="0">
+					<Grid Grid.Column="12" Grid.ColumnSpan="4" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -171,11 +171,11 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[21], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[23], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[25], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[21], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[23], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[25], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="16" Grid.ColumnSpan="3" Grid.Row="0">
+					<Grid Grid.Column="16" Grid.ColumnSpan="3" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -183,10 +183,10 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[28], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[30], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[28], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[30], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="19" Grid.ColumnSpan="4" Grid.Row="0">
+					<Grid Grid.Column="19" Grid.ColumnSpan="4" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -196,11 +196,11 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[33], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[35], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[37], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[33], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[35], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[37], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="23" Grid.ColumnSpan="3" Grid.Row="0">
+					<Grid Grid.Column="23" Grid.ColumnSpan="3" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -208,10 +208,10 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[40], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[42], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[40], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[42], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="26" Grid.ColumnSpan="4" Grid.Row="0">
+					<Grid Grid.Column="26" Grid.ColumnSpan="4" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -221,11 +221,11 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[45], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[47], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[49], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[45], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[47], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[49], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="30" Grid.ColumnSpan="3" Grid.Row="0">
+					<Grid Grid.Column="30" Grid.ColumnSpan="3" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -233,10 +233,10 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[52], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[54], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[52], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[54], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="33" Grid.ColumnSpan="4" Grid.Row="0">
+					<Grid Grid.Column="33" Grid.ColumnSpan="4" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -246,11 +246,11 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[57], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[59], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[61], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[57], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[59], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[61], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="37" Grid.ColumnSpan="3" Grid.Row="0">
+					<Grid Grid.Column="37" Grid.ColumnSpan="3" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -258,10 +258,10 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[64], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[66], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[64], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[66], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="40" Grid.ColumnSpan="4" Grid.Row="0">
+					<Grid Grid.Column="40" Grid.ColumnSpan="4" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -271,11 +271,11 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[69], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[71], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[73], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[69], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[71], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[73], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="44" Grid.ColumnSpan="3" Grid.Row="0">
+					<Grid Grid.Column="44" Grid.ColumnSpan="3" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -283,10 +283,10 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[76], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[78], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[76], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[78], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
-					<Grid Grid.Column="47" Grid.ColumnSpan="4" Grid.Row="0">
+					<Grid Grid.Column="47" Grid.ColumnSpan="4" Grid.Row="0" Style="{StaticResource ResourceKey=KeysBlackPanel}">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
@@ -296,9 +296,9 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[81], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[83], Converter={StaticResource ResourceKey=KeysBlack}}"/>
-						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItem}" Fill="{Binding Path=Keys[85], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="1" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[81], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="3" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[83], Converter={StaticResource ResourceKey=KeysBlack}}"/>
+						<Rectangle Grid.Column="5" Style="{StaticResource ResourceKey=KeyItemBlack}" Fill="{Binding Path=Keys[85], Converter={StaticResource ResourceKey=KeysBlack}}"/>
 					</Grid>
 					<TextBlock Grid.Column="2" Grid.Row="1" Text="C1"/>
 					<TextBlock Grid.Column="9" Grid.Row="1" Text="C2"/>

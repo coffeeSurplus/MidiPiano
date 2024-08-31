@@ -19,6 +19,9 @@
 		<Setter Property="Height" Value="127"/>
 		<Setter Property="Width" Value="10"/>
 	</Style>
+	<Style TargetType="Grid" x:Key="KeysBlackPanel">
+		<Setter Property="Margin" Value="2.5,0"/>
+	</Style>
 	<Style TargetType="Grid" x:Key="NotesPanel">
 		<Setter Property="Height" Value="500"/>
 	</Style>
@@ -36,7 +39,12 @@
 		<Setter Property="Width" Value="9"/>
 		<Setter Property="Margin" Value="0.5,0"/>
 	</Style>
-	<Style TargetType="Rectangle" x:Key="KeyItem">
+	<Style TargetType="Rectangle" x:Key="KeyItemBlack">
+		<Setter Property="Margin" Value="0.5,0"/>
+		<Setter Property="Stroke" Value="{StaticResource ResourceKey=Black}"/>
+		<Setter Property="StrokeThickness" Value="1"/>
+	</Style>
+	<Style TargetType="Rectangle" x:Key="KeyItemWhite">
 		<Setter Property="Stroke" Value="{StaticResource ResourceKey=Black}"/>
 		<Setter Property="StrokeThickness" Value="1"/>
 	</Style>
