@@ -4,13 +4,15 @@
 
 ## preview
 
-![main window](/Gallery/MainWindow.png)
+![main window notes](/Gallery/MainWindowNotes.png)
+![main window frequencies](/Gallery/MainWindowFrequencies.png)
 
 ## features
 
 * connect a midi-in device and a midi-out device
 * record midi events from the midi-in device
 * playback midi events through the midi-out device
+* piano roll/stream of notes
 * simple bar chart which displays frequencies of each note
 * keyboard which displays current notes being held down
 * meter which displays current pressure on damper/sustain pedal
