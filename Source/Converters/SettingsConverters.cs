@@ -36,5 +36,5 @@ internal class SettingsDeviceOutputNameConverter : IValueConverter
 	public object? Convert(object value, Type targetType, object parameter, CultureInfo culture) => value is not null ? ((DeviceInformation)value).Name : null;
 	public object? ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) => value is not null ? Task.Run(GetOutputDevices).Result.First(x => x.Name == (string)value) : null;
 
-	private static async Task<DeviceInformationCollection> GetOutputDevices() => await DeviceInformation.FindAllAsync(MidiOutPort.GetDeviceSelector());
+	private async Task<DeviceInformationCollection> GetOutputDevices() => await DeviceInformation.FindAllAsync(MidiOutPort.GetDeviceSelector());
 }
