@@ -13,7 +13,7 @@ namespace MidiPiano.Source.ViewModels;
 internal class MainWindowViewModel : ViewModelBase
 {
 	private readonly DeviceWatcher deviceWatcher = DeviceInformation.CreateWatcher($"{MidiInPort.GetDeviceSelector()} OR {MidiOutPort.GetDeviceSelector()}");
-	private readonly DispatcherTimer dispatcherTimer = new() { Interval = new(0, 0, 0, 0, 1) };
+	private readonly DispatcherTimer dispatcherTimer = new() { Interval = new(0, 0, 0, 0, 10) };
 	private readonly Stopwatch stopwatch = new();
 
 	private MidiInPort? midiInPort = null;
