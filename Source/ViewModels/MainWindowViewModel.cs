@@ -200,9 +200,9 @@ internal class MainWindowViewModel : ViewModelBase
 	}
 	private void MidiMessageRecieved(MidiInPort sender, MidiMessageReceivedEventArgs args)
 	{
-		MidiMessages.Add(args.Message);
-		Application.Current.Dispatcher.Invoke(AddNote, args.Message);
-		Application.Current.Dispatcher.Invoke(DistributeMessage, args.Message);
+		IMidiMessage message = args.Message is MidiNoteOnMessage noteOnMessage && Keys[noteOnMessage.Note - 21] ? new MidiNoteOffMessage(noteOnMessage.Channel, noteOnMessage.Note, noteOnMessage.Velocity) : args.Message;
+		MidiMessages.Add(message);
+		Application.Current.Dispatcher.Invoke(DistributeMessage, message);
 	}
 
 	private void RecordPlay()
@@ -294,19 +294,13 @@ internal class MainWindowViewModel : ViewModelBase
 		Reset();
 	}
 
-	private void AddNote(IMidiMessage message)
-	{
-		if (message.Type is MidiMessageType.NoteOn)
-		{
-			Notes.Add(new(message.ConvertToNoteOn(), message.Timestamp));
-			LastPlayed[message.ConvertToNoteOn()] = message.Timestamp;
-		}
-	}
 	private void DistributeMessage(IMidiMessage message)
 	{
 		switch (message.Type)
 		{
 			case MidiMessageType.NoteOn:
+				Notes.Add(new(message.ConvertToNoteOn(), message.Timestamp));
+				LastPlayed[message.ConvertToNoteOn()] = message.Timestamp;
 				Frequencies[message.ConvertToNoteOn()]++;
 				Keys[message.ConvertToNoteOn()] = true;
 				TotalNotes = Frequencies.Sum();
@@ -330,11 +324,8 @@ internal class MainWindowViewModel : ViewModelBase
 	}
 	private void CurrentDeviceLost()
 	{
-		if (IsRunning)
-		{
-			IsRunning = false;
-			ClearRestart();
-		}
+		IsRunning = false;
+		ClearRestart();
 	}
 	private void StopAllNotes()
 	{
